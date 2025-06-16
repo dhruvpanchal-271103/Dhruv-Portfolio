@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import SectionWrapper from "@/components/ui/section-wrapper";
 import { Code, Palette, Download, Wind } from "lucide-react";
-// Removed import for dhruvPic as it will be sourced from public folder
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -26,7 +25,7 @@ export default function AboutSection() {
       <div className="grid md:grid-cols-5 gap-12 items-center">
         <div className="md:col-span-2 flex justify-center md:justify-start">
           <Image
-            src="/images/Dhruv_Pic.png" // Updated src to point to public/images/
+            src="/images/Dhruv_Pic.png" 
             alt="Dhruv Panchal - Professional Headshot"
             width={320}
             height={320}
