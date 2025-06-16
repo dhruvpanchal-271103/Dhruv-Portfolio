@@ -32,7 +32,7 @@ export default function ExperienceSection() {
       </div>
 
       <div className="max-w-3xl mx-auto">
-        <div className="space-y-8"> 
+        <div className="space-y-8">
           {workExperience.map((exp, index) => (
             <Card
               key={exp.id}
@@ -56,9 +56,11 @@ export default function ExperienceSection() {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-foreground/90 leading-relaxed">
-                  {exp.responsibilities.join('. ') + '.'}
-                </p>
+                <ul className="list-disc list-inside space-y-2 text-foreground/90 leading-relaxed">
+                  {exp.responsibilities.map((responsibility, rIndex) => (
+                    <li key={rIndex}>{responsibility}</li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
           ))}
@@ -67,4 +69,3 @@ export default function ExperienceSection() {
     </SectionWrapper>
   );
 }
-
