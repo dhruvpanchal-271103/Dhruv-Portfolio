@@ -34,35 +34,41 @@ export default function ExperienceSection() {
       <div className="max-w-3xl mx-auto">
         <div className="space-y-12">
           {workExperience.map((exp, index) => (
-            <Card
+            <div
               key={exp.id}
-              className="bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-accent/20 transition-shadow duration-300 animate-fade-in opacity-0"
+              className="flex animate-fade-in opacity-0"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <CardHeader>
-                <div className="flex items-center space-x-4">
-                  <div className="bg-primary/10 p-3 rounded-md shrink-0">
-                     <Briefcase className="w-8 h-8 text-accent" />
-                  </div>
-                  <div>
-                    <CardTitle className="font-headline text-xl md:text-2xl text-foreground mb-1">{exp.role}</CardTitle>
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-x-2 gap-y-1">
-                      <CardDescription className="text-base text-muted-foreground font-medium">{exp.company}</CardDescription>
-                      <p className="text-sm text-muted-foreground/80 sm:mt-0 shrink-0 whitespace-nowrap">
-                        {exp.startDate} - {exp.endDate}
-                      </p>
-                    </div>
-                  </div>
+              {/* Left Column: Timeline marker and connecting line */}
+              <div className="flex flex-col items-center mr-6 w-12"> {/* Added fixed width for alignment */}
+                <div className="bg-primary/10 p-2.5 rounded-full ring-4 ring-background z-10">
+                  <Briefcase className="w-5 h-5 text-accent" />
                 </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="list-disc list-outside ml-5 space-y-2 text-foreground/90 leading-relaxed">
-                  {exp.responsibilities.map((responsibility, rIndex) => (
-                    <li key={rIndex}>{responsibility}</li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+                {index < workExperience.length - 1 && (
+                  <div className="w-px flex-1 bg-border/70 mt-2"></div>
+                )}
+              </div>
+
+              {/* Right Column: Content Card */}
+              <Card className="flex-1 bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-accent/20 transition-shadow duration-300">
+                <CardHeader>
+                  <CardTitle className="font-headline text-xl md:text-2xl text-foreground mb-1">{exp.role}</CardTitle>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-x-2 gap-y-1">
+                    <CardDescription className="text-base text-muted-foreground font-medium">{exp.company}</CardDescription>
+                    <p className="text-sm text-muted-foreground/80 sm:mt-0 shrink-0 whitespace-nowrap">
+                      {exp.startDate} - {exp.endDate}
+                    </p>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="list-disc list-outside ml-5 space-y-2 text-foreground/90 leading-relaxed">
+                    {exp.responsibilities.map((responsibility, rIndex) => (
+                      <li key={rIndex}>{responsibility}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </div>
