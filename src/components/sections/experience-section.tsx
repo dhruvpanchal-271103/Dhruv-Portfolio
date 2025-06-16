@@ -32,7 +32,7 @@ export default function ExperienceSection() {
       </div>
 
       <div className="max-w-3xl mx-auto">
-        <div className="space-y-8">
+        <div className="space-y-12"> {/* Increased spacing between cards */}
           {workExperience.map((exp, index) => (
             <Card
               key={exp.id}
@@ -40,8 +40,8 @@ export default function ExperienceSection() {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <CardHeader>
-                <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 p-3 rounded-md shrink-0 mt-1">
+                <div className="flex items-center space-x-4"> {/* Changed items-start to items-center */}
+                  <div className="bg-primary/10 p-3 rounded-md shrink-0"> {/* Removed mt-1 */}
                      <Briefcase className="w-8 h-8 text-accent" />
                   </div>
                   <div>
@@ -56,7 +56,7 @@ export default function ExperienceSection() {
                 </div>
               </CardHeader>
               <CardContent>
-                <ul className="list-disc list-inside space-y-2 text-foreground/90 leading-relaxed">
+                <ul className="list-disc list-inside space-y-2 text-foreground/90 leading-relaxed"> {/* Removed pl-5 */}
                   {exp.responsibilities.map((responsibility, rIndex) => (
                     <li key={rIndex}>{responsibility}</li>
                   ))}
