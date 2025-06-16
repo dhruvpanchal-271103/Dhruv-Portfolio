@@ -46,7 +46,7 @@ export default function AboutSection() {
                 I aim to write clean, maintainable code and create seamless user experiences. When I&apos;m not coding, I enjoy exploring new tools, watching tech tutorials, and improving my problem-solving skills.
               </p>
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary">
-                <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" download>
+                <Link href="/Dhruv-Panchal.pdf" target="_blank" rel="noopener noreferrer" download>
                   <Download className="mr-2 h-5 w-5" />
                   Download Resume
                 </Link>
