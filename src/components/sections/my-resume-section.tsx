@@ -16,7 +16,7 @@ export default function MyResumeSection() {
           <CardHeader>
             <CardTitle className="font-headline text-4xl md:text-5xl font-bold text-foreground">My Resume</CardTitle>
           </CardHeader>
-          <CardContent className="flex flex-col items-center space-y-6 pt-0">
+          <CardContent className="flex flex-col items-center space-y-6">
             <p className="text-lg text-muted-foreground">
               Ready to learn more about my qualifications? Download my resume.
             </p>
