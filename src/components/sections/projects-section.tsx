@@ -11,26 +11,18 @@ const featuredProjects: Project[] = [
     description: "EasyStay is a responsive hotel and property booking web app built using React.js, Tailwind CSS, and ShadCN UI.",
     imageUrl: "/images/easystay.png",
     imageHint: "hotel booking interface",
-    tags: ["React.js", "JavaScript",  "Tailwind CSS" ],
+    tags: ["React.js", "JavaScript", "Tailwind CSS"],
     liveUrl: "https://easy-stay-project.vercel.app/",
   },
-  // {
-  //   id: "2",
-  //   title: "Interactive Data Visualization Dashboard",
-  //   description: "A real-time analytics dashboard for visualizing complex datasets, providing actionable insights through an intuitive interface.",
-  //   imageUrl: "https://placehold.co/600x400.png",
-  //   imageHint: "data dashboard",
-  //   tags: ["React", "D3.js", "Node.js", "WebSocket"],
-  //   liveUrl: "#",
-  // },
-  // {
-  //   id: "3",
-  //   title: "Mobile-First Social Networking App",
-  //   description: "A responsive social app designed for community engagement, featuring media sharing and real-time chat functionalities.",
-  //   imageUrl: "https://placehold.co/600x400.png",
-  //   imageHint: "mobile app",
-  //   tags: ["React Native", "Firebase", "GraphQL", "UX Design"],
-  // },
+  {
+    id: "2",
+    title: "JS Mini Projects Collection",
+    description: "A collection of mini JavaScript projects focused on core concepts like DOM manipulation, events, and interactive UI features. Ideal for practicing and strengthening frontend development skills.",
+    imageUrl: "/images/Task.png",
+    imageHint: "JS Mini Projects Collection",
+    tags: ["HTML", "TailwindCSS", "JAvaScript"],
+    liveUrl: "https://java-script-tasks.vercel.app/",
+  },
   //  {
   //   id: "4",
   //   title: "Open Source Portfolio CMS",
@@ -54,9 +46,9 @@ export default function ProjectsSection() {
         featuredProjects.length === 1 ? "md:grid-cols-1" : "md:grid-cols-2"
       )}>
         {featuredProjects.map((project, index) => (
-          <div 
-            key={project.id} 
-            style={{ animationDelay: `${index * 150}ms` }} 
+          <div
+            key={project.id}
+            style={{ animationDelay: `${index * 150}ms` }}
             className={cn(
               "animate-fade-in opacity-0 w-full",
               featuredProjects.length === 1 && "md:max-w-xl md:mx-auto"
