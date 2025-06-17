@@ -18,7 +18,7 @@ const featuredProjects: Project[] = [
     id: "2",
     title: "JS Mini Projects Collection",
     description: "A collection of mini JavaScript projects focused on core concepts like DOM manipulation, events, and interactive UI features. Ideal for practicing and strengthening frontend development skills.",
-    imageUrl: "/images/Task.png",
+    imageUrl: "/images/Tasks.png",
     imageHint: "JS Mini Projects Collection",
     tags: ["HTML", "TailwindCSS", "JAvaScript"],
     liveUrl: "https://java-script-tasks.vercel.app/",
