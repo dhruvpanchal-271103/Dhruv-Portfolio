@@ -50,8 +50,7 @@ export default function ProjectsSection() {
             key={project.id}
             style={{ animationDelay: `${index * 150}ms` }}
             className={cn(
-              "animate-fade-in opacity-0 w-full",
-              featuredProjects.length === 1 && "md:max-w-xl md:mx-auto"
+              "animate-fade-in opacity-0 w-full md:max-w-lg md:mx-auto"
             )}
           >
             <ProjectCard project={project} />
@@ -61,3 +60,4 @@ export default function ProjectsSection() {
     </SectionWrapper>
   );
 }
+
