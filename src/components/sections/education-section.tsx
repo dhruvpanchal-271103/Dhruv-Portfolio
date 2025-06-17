@@ -1,6 +1,6 @@
 
 import SectionWrapper from "@/components/ui/section-wrapper";
-import { Card, CardContent } from "@/components/ui/card"; // Use CardContent for padding
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { type EducationItem } from "@/lib/types";
 import { School } from "lucide-react";
 
@@ -34,37 +34,48 @@ const educationHistory: EducationItem[] = [
 export default function EducationSection() {
   return (
     <SectionWrapper id="education" className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 md:mb-16">
         <h2 className="font-headline text-4xl md:text-5xl font-bold text-foreground">Education</h2>
         <p className="text-lg text-muted-foreground mt-2">My academic background and qualifications.</p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <div className="max-w-3xl mx-auto space-y-16">
         {educationHistory.map((edu, index) => (
-          <Card
-            key={edu.id}
-            className="bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-accent/20 transition-shadow duration-300 animate-fade-in opacity-0 flex flex-col"
-            style={{ animationDelay: `${index * 100}ms` }}
+          <div 
+            key={edu.id} 
+            className="grid grid-cols-[auto_1fr] gap-x-4 sm:gap-x-6 items-start animate-fade-in opacity-0"
+            style={{ animationDelay: `${index * 150}ms` }}
           >
-            <CardContent className="p-6 flex items-start space-x-4 flex-grow"> {/* Use CardContent for padding and flex layout */}
-              <div className="bg-primary/10 p-3 rounded-lg shrink-0 mt-1">
-                <School className="w-8 h-8 text-accent" />
+            {/* Timeline Gutter */}
+            <div className="flex flex-col items-center self-stretch pt-1"> {/* self-stretch to make gutter full height of row */}
+              <div className="bg-accent text-accent-foreground rounded-full p-0 shadow-lg flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 shrink-0">
+                <School className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
-              <div className="flex-grow">
-                <h3 className="font-headline text-xl font-semibold text-foreground mb-1 leading-tight">
+              {index < educationHistory.length - 1 && (
+                <div className="w-0.5 grow bg-border mt-4"></div> 
+              )}
+            </div>
+
+            {/* Content Card */}
+            <Card className="bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-accent/20 transition-shadow duration-300 w-full">
+              <CardHeader>
+                <CardTitle className="font-headline text-xl md:text-2xl text-foreground mb-1">
                   {edu.institution}
-                </h3>
-                <p className="text-base text-foreground/90">
+                </CardTitle>
+                <CardDescription className="text-base text-foreground/90">
                   {edu.degree}
-                </p>
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pt-0">
                 {edu.fieldOfStudy && (
-                  <p className="text-sm text-muted-foreground">{edu.fieldOfStudy}</p>
+                  <p className="text-sm text-muted-foreground mb-1">{edu.fieldOfStudy}</p>
                 )}
-                <p className="text-xs text-muted-foreground/80 pt-1">
+                <p className="text-xs text-muted-foreground/80">
                   {edu.startDate} - {edu.endDate}
                 </p>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         ))}
       </div>
     </SectionWrapper>
