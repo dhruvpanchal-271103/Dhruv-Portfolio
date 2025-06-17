@@ -38,7 +38,7 @@ export default function AboutSection() {
 
         <div className="md:col-span-3">
           <Card 
-            className="bg-card/50 backdrop-blur-sm hover:shadow-accent/20 transition-shadow duration-300 animate-fade-in opacity-0"
+            className="bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-accent/20 transition-shadow duration-300 animate-fade-in opacity-0"
             style={{ animationDelay: '150ms' }}
           >
             <CardContent className="p-6 md:p-8">
