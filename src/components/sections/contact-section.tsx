@@ -45,7 +45,7 @@ export default function ContactSection() {
       </div>
       
       <div className="max-w-3xl mx-auto">
-        <Card className="bg-card/50 backdrop-blur-sm shadow-lg">
+        <Card className="bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-accent/20 transition-shadow duration-300">
           <CardContent className="p-6 md:p-8">
             <div className="space-y-6">
               {/* Line 1: Email and Phone */}
@@ -101,3 +101,4 @@ export default function ContactSection() {
     </SectionWrapper>
   );
 }
+
