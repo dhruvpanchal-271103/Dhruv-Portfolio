@@ -29,14 +29,18 @@ export default function AboutSection() {
             alt="Dhruv Panchal - Professional Headshot"
             width={320}
             height={320}
-            className="rounded-full shadow-2xl border-4 border-foreground object-cover aspect-square"
+            className="rounded-full shadow-2xl border-4 border-foreground object-cover aspect-square animate-fade-in opacity-0"
             data-ai-hint="male portrait"
             priority
+            style={{ animationDelay: '50ms' }}
           />
         </div>
 
         <div className="md:col-span-3">
-          <Card className="bg-card/50 backdrop-blur-sm hover:shadow-accent/20 transition-shadow duration-300">
+          <Card 
+            className="bg-card/50 backdrop-blur-sm hover:shadow-accent/20 transition-shadow duration-300 animate-fade-in opacity-0"
+            style={{ animationDelay: '150ms' }}
+          >
             <CardContent className="p-6 md:p-8">
               <p className="text-lg text-foreground/90 leading-relaxed mb-6">
                 Hello! I&apos;m Dhruv Panchal, a passionate Frontend Developer with a strong interest in building clean, responsive, and user-friendly web interfaces.
@@ -63,7 +67,7 @@ export default function AboutSection() {
             <Card
               key={skill.name}
               className="w-full sm:w-[calc(50%_-_0.75rem)] lg:w-72 bg-card/50 hover:shadow-accent/20 hover:shadow-lg transition-shadow duration-300 animate-fade-in opacity-0"
-              style={{ animationDelay: `${index * 100}ms` }}
+              style={{ animationDelay: `${(index + 3) * 100}ms` }} 
             >
               <CardContent className="p-6 flex items-center space-x-4">
                 <skill.icon className="w-8 h-8 text-accent" />
