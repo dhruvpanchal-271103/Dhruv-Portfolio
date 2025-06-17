@@ -8,30 +8,26 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export default function MyResumeSection() {
   return (
     <SectionWrapper id="my-resume" className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="max-w-2xl mx-auto text-center"> {/* Centering container for the card */}
-        <Card 
-          className="bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-accent/20 transition-shadow duration-300 animate-fade-in opacity-0 py-3 md:py-6 lg:py-8"
-          style={{ animationDelay: '100ms' }}
-        >
-          <CardHeader>
+      <div className="max-w-2xl mx-auto text-center">
+          <CardHeader className="mb-4">
             <CardTitle className="font-headline text-4xl md:text-5xl font-bold text-foreground">My Resume</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col items-center space-y-4 py-6"> {/* Added py-8 for more vertical padding */}
             <p className="text-lg text-muted-foreground">
-              Ready to learn more about my qualifications? Download my resume.
+              Want to know more about me? Check out my resume.
             </p>
-            <Button 
-              asChild 
-              size="lg" 
+          </CardHeader>
+          <CardContent className="flex flex-col items-center"> {/* Added py-8 for more vertical padding */}
+           
+            <Button
+              asChild
+              size="lg"
               className="bg-accent text-accent-foreground hover:bg-white hover:text-primary"
             >
               <Link href="/Dhruv-Panchal.pdf" target="_blank" rel="noopener noreferrer" download>
                 <Download className="mr-2 h-5 w-5" />
-                Download My Resume
+                Download Resume
               </Link>
             </Button>
           </CardContent>
-        </Card>
       </div>
     </SectionWrapper>
   );
