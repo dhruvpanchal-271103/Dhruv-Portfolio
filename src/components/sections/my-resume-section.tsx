@@ -16,7 +16,7 @@ export default function MyResumeSection() {
           <CardHeader>
             <CardTitle className="font-headline text-4xl md:text-5xl font-bold text-foreground">My Resume</CardTitle>
           </CardHeader>
-          <CardContent className="flex flex-col items-center space-y-6">
+          <CardContent className="flex flex-col items-center space-y-6 py-8"> {/* Added py-8 for more vertical padding */}
             <p className="text-lg text-muted-foreground">
               Ready to learn more about my qualifications? Download my resume.
             </p>
