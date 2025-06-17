@@ -1,6 +1,6 @@
 
 import SectionWrapper from "@/components/ui/section-wrapper";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { type EducationItem } from "@/lib/types";
 import { School } from "lucide-react";
 
@@ -42,26 +42,28 @@ export default function EducationSection() {
         {educationHistory.map((edu, index) => (
           <Card
             key={edu.id}
-            className="bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-accent/20 transition-shadow duration-300 animate-fade-in opacity-0"
+            className="bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-accent/20 transition-shadow duration-300 animate-fade-in opacity-0 flex flex-col"
             style={{ animationDelay: `${index * 100}ms` }}
           >
-            <CardHeader>
-              <div className="flex items-start space-x-4">
-                <div className="bg-primary/10 p-3 rounded-md shrink-0">
-                   <School className="w-8 h-8 text-accent" />
-                </div>
-                <div>
-                  <CardTitle className="font-headline text-2xl text-foreground">{edu.institution}</CardTitle>
-                  <CardDescription className="text-muted-foreground">
-                    {edu.degree} {edu.fieldOfStudy ? `in ${edu.fieldOfStudy}` : ''}
-                  </CardDescription>
-                  <p className="text-sm text-muted-foreground/80 mt-1">
-                    {edu.startDate} - {edu.endDate}
-                  </p>
-                </div>
+            <CardHeader className="flex flex-row items-center space-x-4 pb-3">
+              <div className="bg-primary/10 p-3 rounded-lg shrink-0">
+                <School className="w-8 h-8 text-accent" />
               </div>
+              <CardTitle className="font-headline text-xl text-foreground leading-tight">{edu.institution}</CardTitle>
             </CardHeader>
-            
+            <CardContent className="pt-0 flex-grow">
+              <div className="space-y-1">
+                <p className="text-base font-semibold text-foreground/90">
+                  {edu.degree}
+                </p>
+                {edu.fieldOfStudy && (
+                  <p className="text-sm text-muted-foreground">{edu.fieldOfStudy}</p>
+                )}
+                <p className="text-xs text-muted-foreground/80 pt-1">
+                  {edu.startDate} - {edu.endDate}
+                </p>
+              </div>
+            </CardContent>
           </Card>
         ))}
       </div>
