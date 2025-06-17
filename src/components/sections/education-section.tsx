@@ -1,6 +1,6 @@
 
 import SectionWrapper from "@/components/ui/section-wrapper";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card"; // Use CardContent for padding
 import { type EducationItem } from "@/lib/types";
 import { School } from "lucide-react";
 
@@ -45,15 +45,15 @@ export default function EducationSection() {
             className="bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-accent/20 transition-shadow duration-300 animate-fade-in opacity-0 flex flex-col"
             style={{ animationDelay: `${index * 100}ms` }}
           >
-            <CardHeader className="flex flex-row items-center space-x-4 pb-3">
-              <div className="bg-primary/10 p-3 rounded-lg shrink-0">
+            <CardContent className="p-6 flex items-start space-x-4 flex-grow"> {/* Use CardContent for padding and flex layout */}
+              <div className="bg-primary/10 p-3 rounded-lg shrink-0 mt-1">
                 <School className="w-8 h-8 text-accent" />
               </div>
-              <CardTitle className="font-headline text-xl text-foreground leading-tight">{edu.institution}</CardTitle>
-            </CardHeader>
-            <CardContent className="pt-0 flex-grow">
-              <div className="space-y-1">
-                <p className="text-base font-semibold text-foreground/90">
+              <div className="flex-grow">
+                <h3 className="font-headline text-xl font-semibold text-foreground mb-1 leading-tight">
+                  {edu.institution}
+                </h3>
+                <p className="text-base text-foreground/90">
                   {edu.degree}
                 </p>
                 {edu.fieldOfStudy && (
