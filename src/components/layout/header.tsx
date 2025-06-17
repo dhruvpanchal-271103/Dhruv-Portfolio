@@ -1,7 +1,7 @@
 
 "use client";
 import { useState, useEffect } from 'react';
-import { Menu, X, Briefcase, User, Mail, BookOpen, Building } from "lucide-react";
+import { Menu, X, Briefcase, User, Mail, BookOpen, Building, FileText } from "lucide-react"; // Added FileText
 import SmoothScrollLink from "./smooth-scroll-link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
@@ -12,6 +12,7 @@ const navItems = [
   { href: "#education", label: "Education", icon: BookOpen },
   { href: "#experience", label: "Experience", icon: Building },
   { href: "#projects", label: "Projects", icon: Briefcase },
+  { href: "#my-resume", label: "Resume", icon: FileText }, // Added Resume link
   { href: "#contact", label: "Contact", icon: Mail },
 ];
 

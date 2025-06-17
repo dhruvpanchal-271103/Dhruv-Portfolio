@@ -2,9 +2,7 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import SectionWrapper from "@/components/ui/section-wrapper";
-import { Code, Palette, Download, Wind } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Code, Palette, Wind } from "lucide-react";
 
 const skills = [
   { name: "React.JS", icon: Code },
@@ -46,15 +44,9 @@ export default function AboutSection() {
                 Hello! I&apos;m Dhruv Panchal, a passionate Frontend Developer with a strong interest in building clean, responsive, and user-friendly web interfaces.
                 I have experience with React.js, Tailwind CSS, and ShadCN UI, and I enjoy turning ideas into real, working websites. I love learning new technologies and continuously improving my skills.
               </p>
-              <p className="text-lg text-foreground/90 leading-relaxed mb-6">
+              <p className="text-lg text-foreground/90 leading-relaxed">
                 I aim to write clean, maintainable code and create seamless user experiences. When I&apos;m not coding, I enjoy exploring new tools, watching tech tutorials, and improving my problem-solving skills.
               </p>
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary">
-                <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" download>
-                  <Download className="mr-2 h-5 w-5" />
-                  Download Resume
-                </Link>
-              </Button>
             </CardContent>
           </Card>
         </div>
