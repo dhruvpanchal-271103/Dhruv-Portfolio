@@ -25,7 +25,7 @@ export default function MyResumeSection() {
               size="lg" 
               className="bg-accent text-accent-foreground hover:bg-white hover:text-primary"
             >
-              <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" download>
+              <Link href="/Dhruv-Panchal.pdf" target="_blank" rel="noopener noreferrer" download>
                 <Download className="mr-2 h-5 w-5" />
                 Download My Resume
               </Link>
