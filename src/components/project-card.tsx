@@ -26,11 +26,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </CardHeader>
       <CardContent className="p-6 flex-grow">
-        {project.category && (
-          <Badge variant="secondary" className="mb-2 text-sm">
-            {project.category}
-          </Badge>
-        )}
         <CardTitle className="font-headline text-2xl mb-2 text-foreground">{project.title}</CardTitle>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (
@@ -45,21 +40,28 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
       </CardContent>
-      <CardFooter className="p-6 pt-0 flex justify-end space-x-3">
-        {project.liveUrl && (
-          <Button asChild variant="outline" size="sm" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-            <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="mr-2 h-4 w-4" /> Live Site
-            </Link>
-          </Button>
+      <CardFooter className="p-6 pt-0 flex justify-between items-center">
+        {project.category && (
+          <Badge variant="secondary" className="text-sm">
+            {project.category}
+          </Badge>
         )}
-        {project.repoUrl && (
-          <Button asChild variant="ghost" size="sm" className="text-muted-foreground hover:bg-muted/50 hover:text-foreground">
-            <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-              <Github className="mr-2 h-4 w-4" /> GitHub
-            </Link>
-          </Button>
-        )}
+        <div className="flex space-x-3">
+          {project.liveUrl && (
+            <Button asChild variant="outline" size="sm" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+              <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="mr-2 h-4 w-4" /> Live Site
+              </Link>
+            </Button>
+          )}
+          {project.repoUrl && (
+            <Button asChild variant="ghost" size="sm" className="text-muted-foreground hover:bg-muted/50 hover:text-foreground">
+              <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                <Github className="mr-2 h-4 w-4" /> GitHub
+              </Link>
+            </Button>
+          )}
+        </div>
       </CardFooter>
     </Card>
   );
