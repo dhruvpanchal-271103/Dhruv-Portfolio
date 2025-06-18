@@ -23,11 +23,11 @@ export default function AboutSection() {
       <div className="grid md:grid-cols-5 gap-12 items-center">
         <div className="md:col-span-2 flex justify-center md:justify-start">
           <Image
-            src="/images/Dhruv_Pic.png" 
+            src="/images/Dhruv_Pic.png"
             alt="Dhruv Panchal - Professional Headshot"
             width={320}
             height={320}
-            className="rounded-full shadow-2xl border-4 border-foreground object-cover aspect-square animate-fade-in opacity-0"
+            className="rounded-lg shadow-2xl border-4 border-foreground object-cover aspect-square animate-fade-in opacity-0"
             data-ai-hint="male portrait"
             priority
             style={{ animationDelay: '50ms' }}
@@ -35,7 +35,7 @@ export default function AboutSection() {
         </div>
 
         <div className="md:col-span-3">
-          <Card 
+          <Card
             className="bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-accent/20 transition-shadow duration-300 animate-fade-in opacity-0"
             style={{ animationDelay: '150ms' }}
           >
@@ -59,7 +59,7 @@ export default function AboutSection() {
             <Card
               key={skill.name}
               className="w-full sm:w-[calc(50%_-_0.75rem)] lg:w-72 bg-card/50 hover:shadow-accent/20 hover:shadow-lg transition-shadow duration-300 animate-fade-in opacity-0"
-              style={{ animationDelay: `${(index + 3) * 100}ms` }} 
+              style={{ animationDelay: `${(index + 3) * 100}ms` }}
             >
               <CardContent className="p-6 flex items-center space-x-4">
                 <skill.icon className="w-8 h-8 text-accent" />

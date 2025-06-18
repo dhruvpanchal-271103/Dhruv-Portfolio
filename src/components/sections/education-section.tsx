@@ -48,7 +48,7 @@ export default function EducationSection() {
           >
             {/* Timeline Gutter */}
             <div className="flex flex-col items-center self-stretch pt-1"> {/* self-stretch to make gutter full height of row */}
-              <div className="bg-accent text-accent-foreground rounded-full p-0 shadow-lg flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 shrink-0">
+              <div className="bg-accent text-accent-foreground rounded-lg p-0 shadow-lg flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 shrink-0">
                 <School className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
               {index < educationHistory.length - 1 && (
