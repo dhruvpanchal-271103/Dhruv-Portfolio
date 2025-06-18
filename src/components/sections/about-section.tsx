@@ -16,7 +16,7 @@ export default function AboutSection() {
   return (
     <SectionWrapper id="about" className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
-        <h2 className="font-headline text-4xl md:text-5xl font-bold text-foreground">About Me</h2>
+        <h2 className="font-headline text-4xl md:text-5xl font-bold text-foreground">About</h2>
       </div>
 
       <div className="grid md:grid-cols-5 gap-12 items-stretch">
@@ -26,7 +26,7 @@ export default function AboutSection() {
             alt="Dhruv Panchal - Professional Headshot"
             width={320}
             height={320}
-            className="rounded-lg shadow-2xl border-4 border-foreground object-cover aspect-square animate-fade-in opacity-0 h-full"
+            className="rounded-lg shadow-2xl border-4 border-border object-cover aspect-square animate-fade-in opacity-0 h-full"
             data-ai-hint="male portrait"
             priority
             style={{ animationDelay: '50ms' }}

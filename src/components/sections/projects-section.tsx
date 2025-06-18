@@ -41,7 +41,7 @@ export default function ProjectsSection() {
   return (
     <SectionWrapper id="projects" className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
-        <h2 className="font-headline text-4xl md:text-5xl font-bold text-foreground">My Projects</h2>
+        <h2 className="font-headline text-4xl md:text-5xl font-bold text-foreground">Projects</h2>
       </div>
       <div className={cn(
         "grid gap-8 max-w-7xl mx-auto",
