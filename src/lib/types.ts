@@ -1,10 +1,11 @@
+
 export type Project = {
   id: string;
   title: string;
   description: string;
   imageUrl: string;
   imageHint?: string;
-  category: string; // Added category field
+  category: string[]; // Changed to string array
   tags: string[];
   liveUrl?: string;
   repoUrl?: string;
@@ -30,4 +31,3 @@ export type ExperienceItem = {
   responsibilities: string[];
   logoUrl?: string; // Optional: if you want to display company logos
 };
-

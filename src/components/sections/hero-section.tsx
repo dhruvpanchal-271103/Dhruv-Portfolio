@@ -13,10 +13,9 @@ export default function HeroSection() {
       className="min-h-screen flex items-center justify-center text-center bg-gradient-to-br from-primary via-background to-background relative overflow-hidden px-4"
     >
       <div className="absolute inset-0 opacity-10">
-        {/* You can add a subtle background pattern or image here if desired */}
       </div>
       <div className="relative z-10 flex flex-col items-center">
-        <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold text-foreground mb-6 animate-fade-in">
+        <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-6 animate-fade-in">
           Frontend Focused, Code Smart
         </h1>
         <p className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>

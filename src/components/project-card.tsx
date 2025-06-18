@@ -32,7 +32,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <Badge 
               key={tag} 
               variant="outline" 
-              className="border-accent text-accent bg-background hover:bg-accent hover:text-accent-foreground"
+              className="border-accent text-accent bg-background hover:bg-accent hover:text-accent-foreground rounded-md"
             >
               {tag}
             </Badge>
@@ -41,14 +41,17 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
       </CardContent>
       <CardFooter className="p-6 pt-0 flex justify-between items-center">
-        {project.category && (
-          <Badge 
-            variant="secondary" 
-            className="text-sm rounded-md"
-          >
-            {project.category}
-          </Badge>
-        )}
+        <div className="flex flex-wrap gap-2">
+          {project.category && project.category.map((cat) => (
+            <Badge 
+              key={cat}
+              variant="secondary" 
+              className="text-sm rounded-md"
+            >
+              {cat}
+            </Badge>
+          ))}
+        </div>
         <div className="flex space-x-3">
           {project.liveUrl && (
             <Button asChild variant="outline" size="sm" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
