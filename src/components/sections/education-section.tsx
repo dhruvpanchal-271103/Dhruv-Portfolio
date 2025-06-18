@@ -47,12 +47,12 @@ export default function EducationSection() {
             style={{ animationDelay: `${index * 150}ms` }}
           >
             {/* Timeline Gutter */}
-            <div className="flex flex-col items-center self-stretch pt-1"> {/* self-stretch to make gutter full height of row */}
+            <div className="flex flex-col items-center self-stretch pt-1">
               <div className="bg-accent text-accent-foreground rounded-lg p-0 shadow-lg flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 shrink-0">
                 <School className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
               {index < educationHistory.length - 1 && (
-                <div className="w-0.5 grow bg-border mt-4"></div> 
+                <div className="w-0.5 grow bg-border"></div> 
               )}
             </div>
 
