@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import SmoothScrollLink from "@/components/layout/smooth-scroll-link";
 import SectionWrapper from "@/components/ui/section-wrapper";
-import { ArrowDown, Download } from "lucide-react";
+import { Mail, Download } from "lucide-react"; // Changed ArrowDown to Mail
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -23,8 +23,8 @@ export default function HeroSection() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary w-full sm:w-auto">
-            <SmoothScrollLink href="#projects">
-              View Projects <ArrowDown className="ml-2 h-5 w-5 animate-bounce" />
+            <SmoothScrollLink href="#contact">
+              Contact Me <Mail className="ml-2 h-5 w-5" />
             </SmoothScrollLink>
           </Button>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary w-full sm:w-auto">
