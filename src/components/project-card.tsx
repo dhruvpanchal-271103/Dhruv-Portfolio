@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { type Project } from "@/lib/types";
@@ -33,7 +34,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <CardTitle className="font-headline text-2xl mb-2 text-foreground">{project.title}</CardTitle>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (
-            <Badge key={tag} variant="secondary" className="bg-primary/20 text-primary-foreground">{tag}</Badge>
+            <Badge 
+              key={tag} 
+              variant="outline" 
+              className="border-accent text-accent bg-background hover:bg-accent hover:text-accent-foreground"
+            >
+              {tag}
+            </Badge>
           ))}
         </div>
         <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
