@@ -38,7 +38,7 @@ export default function HeroSection() {
         <SmoothScrollLink
           href="#projects"
           aria-label="Scroll to projects"
-          className="p-2 rounded-full text-foreground/70 hover:text-accent hover:bg-card/80 backdrop-blur-sm transition-colors"
+          className="p-2 rounded-full text-foreground/70 transition-colors"
         >
           <ChevronDown size={32} />
         </SmoothScrollLink>
