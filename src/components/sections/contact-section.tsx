@@ -24,7 +24,6 @@ export default function ContactSection() {
     <SectionWrapper id="contact" className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
         <h2 className="font-headline text-4xl md:text-5xl font-bold text-foreground">Get In Touch</h2>
-        <p className="text-lg text-muted-foreground mt-2">Feel free to reach out to me.</p>
       </div>
       
       <div className="max-w-3xl mx-auto">
@@ -40,8 +39,6 @@ export default function ContactSection() {
                       <h4 className="text-lg font-semibold text-foreground">{item.label}</h4>
                       <Link
                         href={item.href}
-                        target={item.target}
-                        rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                         className="text-muted-foreground hover:text-accent transition-colors break-all"
                       >
                         {item.value}

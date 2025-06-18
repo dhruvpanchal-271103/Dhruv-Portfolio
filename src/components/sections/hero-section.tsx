@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import SmoothScrollLink from "@/components/layout/smooth-scroll-link";
 import SectionWrapper from "@/components/ui/section-wrapper";
-import { Download, ArrowDown, ChevronDown } from "lucide-react"; 
+import { Download, ArrowDown, ChevronDown } from "lucide-react";
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -17,10 +17,10 @@ export default function HeroSection() {
       </div>
       <div className="relative z-10 flex flex-col items-center">
         <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold text-foreground mb-6 animate-fade-in">
-          Welcome to Dhruv's Portfolio
+          Frontend Focused, Code Smart
         </h1>
         <p className="text-xl md:text-2xl text-foreground/80 mb-10 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
-        Crafting Clean Interfaces with React & Tailwind
+          Crafting Clean Interfaces with React & Tailwind
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary w-full sm:w-auto">

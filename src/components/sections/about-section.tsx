@@ -17,7 +17,6 @@ export default function AboutSection() {
     <SectionWrapper id="about" className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
         <h2 className="font-headline text-4xl md:text-5xl font-bold text-foreground">About Me</h2>
-        <p className="text-lg text-muted-foreground mt-2">A quick intro about me and what I do.</p>
       </div>
 
       <div className="grid md:grid-cols-5 gap-12 items-stretch">
