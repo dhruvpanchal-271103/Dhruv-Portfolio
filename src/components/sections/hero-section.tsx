@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import SmoothScrollLink from "@/components/layout/smooth-scroll-link";
 import SectionWrapper from "@/components/ui/section-wrapper";
-import { Download, ArrowRight, ChevronDown } from "lucide-react"; 
+import { Download, ArrowDown, ChevronDown } from "lucide-react"; 
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -25,7 +25,7 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary w-full sm:w-auto">
             <SmoothScrollLink href="#contact">
-              Contact Me <ArrowRight className="ml-2 h-5 w-5" />
+              Contact Me <ArrowDown className="ml-2 h-5 w-5" />
             </SmoothScrollLink>
           </Button>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary w-full sm:w-auto">
