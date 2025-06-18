@@ -11,7 +11,7 @@ const featuredProjects: Project[] = [
     category: ["Personal"],
     description: "EasyStay is a responsive hotel and property booking web app built using React.js, Tailwind CSS, and ShadCN UI.",
     imageUrl: "/images/easystay.png",
-    imageHint: "hotel booking interface",
+    imageHint: "Hotel booking interface",
     tags: ["React.js", "JavaScript", "Tailwind CSS"],
     liveUrl: "https://easy-stay-project.vercel.app/",
   },
@@ -25,15 +25,16 @@ const featuredProjects: Project[] = [
     tags: ["HTML", "TailwindCSS", "JavaScript"],
     liveUrl: "https://java-script-tasks.vercel.app/",
   },
-  //  {
-  //   id: "4",
-  //   title: "Open Source Portfolio CMS",
-  //   description: "A customizable content management system for creatives to easily showcase their work, built with a focus on performance and SEO.",
-  //   imageUrl: "https://placehold.co/600x400.png",
-  //   imageHint: "cms interface",
-  //   tags: ["Astro", "Markdown", "Preact", "Open Source"],
-  //   liveUrl: "#",
-  // },
+  {
+    id: "3",
+    title: "Project Case Study Builder",
+    category: ["7Span", "Internship"],
+    description: "A dynamic tool that helps users create and customize professional case studies with ease. It simplifies content organization and presentation for impactful storytelling.",
+    imageUrl: "/images/case-study-builder.png",
+    imageHint: "Project Case Study",
+    tags: ["HTML", "TailwindCSS", "React.JS", "ShadCN UI"],
+  },
+
 ];
 
 export default function ProjectsSection() {
