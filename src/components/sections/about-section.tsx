@@ -20,26 +20,26 @@ export default function AboutSection() {
         <p className="text-lg text-muted-foreground mt-2">A quick intro about me and what I do.</p>
       </div>
 
-      <div className="grid md:grid-cols-5 gap-12 items-center">
-        <div className="md:col-span-2 flex justify-center md:justify-start">
+      <div className="grid md:grid-cols-5 gap-12 items-stretch">
+        <div className="md:col-span-2 flex justify-center md:justify-start h-full">
           <Image
             src="/images/Dhruv_Pic.png"
             alt="Dhruv Panchal - Professional Headshot"
             width={320}
             height={320}
-            className="rounded-lg shadow-2xl border-4 border-foreground object-cover aspect-square animate-fade-in opacity-0"
+            className="rounded-lg shadow-2xl border-4 border-foreground object-cover aspect-square animate-fade-in opacity-0 h-full"
             data-ai-hint="male portrait"
             priority
             style={{ animationDelay: '50ms' }}
           />
         </div>
 
-        <div className="md:col-span-3">
+        <div className="md:col-span-3 h-full">
           <Card
-            className="bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-accent/20 transition-shadow duration-300 animate-fade-in opacity-0"
+            className="h-full flex flex-col bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-accent/20 transition-shadow duration-300 animate-fade-in opacity-0"
             style={{ animationDelay: '150ms' }}
           >
-            <CardContent className="p-6 md:p-8">
+            <CardContent className="p-6 md:p-8 flex-grow">
               <p className="text-lg text-foreground/90 leading-relaxed mb-6">
                 Hello! I&apos;m Dhruv Panchal, a passionate Frontend Developer with a strong interest in building clean, responsive, and user-friendly web interfaces.
                 I have experience with React.js, Tailwind CSS, and ShadCN UI, and I enjoy turning ideas into real, working websites. I love learning new technologies and continuously improving my skills.
