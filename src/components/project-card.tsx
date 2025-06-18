@@ -42,7 +42,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </CardContent>
       <CardFooter className="p-6 pt-0 flex justify-between items-center">
         {project.category && (
-          <Badge variant="secondary" className="text-sm">
+          <Badge 
+            variant="outline" 
+            className="text-sm border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+          >
             {project.category}
           </Badge>
         )}
