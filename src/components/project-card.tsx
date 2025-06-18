@@ -25,6 +25,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </CardHeader>
       <CardContent className="p-6 flex-grow">
+        {project.category && (
+          <Badge variant="secondary" className="mb-2 text-sm">
+            {project.category}
+          </Badge>
+        )}
         <CardTitle className="font-headline text-2xl mb-2 text-foreground">{project.title}</CardTitle>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (

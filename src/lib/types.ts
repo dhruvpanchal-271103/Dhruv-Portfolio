@@ -4,6 +4,7 @@ export type Project = {
   description: string;
   imageUrl: string;
   imageHint?: string;
+  category: string; // Added category field
   tags: string[];
   liveUrl?: string;
   repoUrl?: string;
@@ -29,3 +30,4 @@ export type ExperienceItem = {
   responsibilities: string[];
   logoUrl?: string; // Optional: if you want to display company logos
 };
+

@@ -8,6 +8,7 @@ const featuredProjects: Project[] = [
   {
     id: "1",
     title: "EasyStay",
+    category: "Web Application",
     description: "EasyStay is a responsive hotel and property booking web app built using React.js, Tailwind CSS, and ShadCN UI.",
     imageUrl: "/images/easystay.png",
     imageHint: "hotel booking interface",
@@ -17,6 +18,7 @@ const featuredProjects: Project[] = [
   {
     id: "2",
     title: "JS Mini Projects Collection",
+    category: "Learning Resource",
     description: "A collection of mini JavaScript projects focused on core concepts like DOM manipulation, events, and interactive UI features. Ideal for practicing and strengthening frontend development skills.",
     imageUrl: "/images/Tasks.png",
     imageHint: "JS Mini Projects Collection",
