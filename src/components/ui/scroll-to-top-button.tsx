@@ -42,7 +42,7 @@ export default function ScrollToTopButton() {
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       )}
     >
-      <ArrowUp className="h-6 w-6 animate-subtle-float" />
+      <ArrowUp className="h-6 w-6 animate-bounce" />
     </Button>
   );
 }
