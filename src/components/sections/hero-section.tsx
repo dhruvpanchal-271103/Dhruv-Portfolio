@@ -1,7 +1,8 @@
+
 import { Button } from "@/components/ui/button";
 import SmoothScrollLink from "@/components/layout/smooth-scroll-link";
 import SectionWrapper from "@/components/ui/section-wrapper";
-import { Mail, Download } from "lucide-react"; // Changed ArrowDown to Mail
+import { Download, ArrowRight, ChevronDown } from "lucide-react"; 
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -14,7 +15,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 opacity-10">
         {/* You can add a subtle background pattern or image here if desired */}
       </div>
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col items-center">
         <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold text-foreground mb-6 animate-fade-in">
           Welcome to Dhruv's Portfolio
         </h1>
@@ -24,7 +25,7 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary w-full sm:w-auto">
             <SmoothScrollLink href="#contact">
-              Contact Me <Mail className="ml-2 h-5 w-5" />
+              Contact Me <ArrowRight className="ml-2 h-5 w-5" />
             </SmoothScrollLink>
           </Button>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary w-full sm:w-auto">
@@ -33,6 +34,15 @@ export default function HeroSection() {
             </Link>
           </Button>
         </div>
+      </div>
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+        <SmoothScrollLink
+          href="#projects"
+          aria-label="Scroll to projects"
+          className="p-2 rounded-full text-foreground/70 hover:text-accent hover:bg-card/80 backdrop-blur-sm transition-colors"
+        >
+          <ChevronDown size={32} />
+        </SmoothScrollLink>
       </div>
     </SectionWrapper>
   );
