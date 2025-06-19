@@ -52,7 +52,7 @@ export default function AboutSection() {
       </div>
 
       <div className="mt-16">
-        <h3 className="font-headline text-3xl font-semibold text-center text-foreground mb-8">My Skills</h3>
+        <h3 className="font-headline text-3xl font-semibold text-center text-foreground mb-8">Skills</h3>
         <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
           {skills.map((skill, index) => (
             <Card
