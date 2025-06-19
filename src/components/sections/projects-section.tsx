@@ -12,7 +12,7 @@ const featuredProjects: Project[] = [
     description: "EasyStay is a responsive hotel and property booking web app built using React.js, Tailwind CSS, and ShadCN UI.",
     imageUrl: "/images/easystay.png",
     imageHint: "Hotel booking interface",
-    tags: ["React.js", "JavaScript", "Tailwind CSS"],
+    tags: ["HTML", "React.js", "JavaScript", "Tailwind CSS"],
     liveUrl: "https://easy-stay-project.vercel.app/",
   },
   {
