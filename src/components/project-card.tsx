@@ -1,5 +1,4 @@
 
-import Image from "next/image";
 import Link from "next/link";
 import { type Project } from "@/lib/types";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,19 +13,10 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card className="overflow-hidden h-full flex flex-col bg-card/80 backdrop-blur-sm shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-      <CardHeader className="p-0">
-        <div className="aspect-video relative overflow-hidden">
-          <Image
-            src={project.imageUrl}
-            alt={project.title}
-            fill
-            className="object-fit transition-transform duration-500 hover:scale-105 p-1 rounded-xl"
-            data-ai-hint={project.imageHint || "technology project"}
-          />
-        </div>
+      <CardHeader>
+        <CardTitle className="font-headline text-2xl text-foreground">{project.title}</CardTitle>
       </CardHeader>
-      <CardContent className="p-6 flex-grow">
-        <CardTitle className="font-headline text-2xl mb-2 text-foreground">{project.title}</CardTitle>
+      <CardContent className="pt-0 flex-grow">
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (
             <Badge 
