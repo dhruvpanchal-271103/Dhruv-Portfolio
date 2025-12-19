@@ -28,7 +28,7 @@ export default function HeroSection() {
             </SmoothScrollLink>
           </Button>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary w-full sm:w-auto">
-            <Link href="/Dhruv-Panchal.pdf" target="_blank" rel="noopener noreferrer" download>
+            <Link href="/Dhruv_Panchal.pdf" target="_blank" rel="noopener noreferrer" download>
               Download Resume <Download className="ml-2 h-5 w-5" />
             </Link>
           </Button>
