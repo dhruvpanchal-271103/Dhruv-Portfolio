@@ -24,7 +24,7 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary w-full sm:w-auto">
             <SmoothScrollLink href="#contact">
-              Contact <ArrowDown className="ml-2 h-5 w-5 animate-bounce" />
+              Contact <ArrowDown className="ml-2 mt-1 h-5 w-5 animate-bounce" />
             </SmoothScrollLink>
           </Button>
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-white hover:text-primary w-full sm:w-auto">
@@ -35,13 +35,9 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-        <SmoothScrollLink
-          href="#projects"
-          aria-label="Scroll to projects"
-          className="p-2 rounded-full text-foreground/70 transition-colors"
-        >
-          <ChevronDown size={32} />
-        </SmoothScrollLink>
+      <SmoothScrollLink href="#projects">  
+          <ChevronDown size={40} className="p-2 rounded-full text-foreground/70 transition-colors cursor-pointer" />
+          </SmoothScrollLink>
       </div>
     </SectionWrapper>
   );

@@ -3,8 +3,6 @@ export type Project = {
   id: string;
   title: string;
   description: string;
-  imageUrl: string;
-  imageHint?: string;
   category: string[]; // Changed to string array
   tags: string[];
   liveUrl?: string;

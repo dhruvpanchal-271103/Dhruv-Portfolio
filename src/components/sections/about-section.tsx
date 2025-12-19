@@ -7,6 +7,7 @@ import { Code, Palette, Wind } from "lucide-react";
 const skills = [
   { name: "React.JS", icon: Code },
   { name: "JavaScript", icon: Code },
+  { name: "TypeScript", icon: Code },
   { name: "TailwindCSS", icon: Wind },
   { name: "HTML", icon: Code },
   { name: "CSS", icon: Palette },
@@ -22,7 +23,7 @@ export default function AboutSection() {
       <div className="grid md:grid-cols-5 gap-12 items-stretch">
         <div className="md:col-span-2 flex justify-center md:justify-start h-full">
           <Image
-            src="/images/Dhruv_Pic.png"
+            src="https://picsum.photos/seed/123/320/320"
             alt="Dhruv Panchal - Professional Headshot"
             width={320}
             height={320}
