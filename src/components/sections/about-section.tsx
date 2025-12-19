@@ -23,7 +23,7 @@ export default function AboutSection() {
       <div className="grid md:grid-cols-5 gap-12 items-stretch">
         <div className="md:col-span-2 flex justify-center md:justify-start h-full">
           <Image
-            src="/Dhruv_Pic.png"
+            src="/images/My_Pic.png"
             alt="Dhruv Panchal - Professional Headshot"
             width={320}
             height={320}
