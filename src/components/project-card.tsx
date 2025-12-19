@@ -14,9 +14,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card className="overflow-hidden h-full flex flex-col bg-card/80 backdrop-blur-sm shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
       <CardHeader>
-        <CardTitle className="font-headline text-2xl text-foreground">{project.title}</CardTitle>
+        {/* Image was here */}
       </CardHeader>
       <CardContent className="pt-0 flex-grow">
+        <CardTitle className="font-headline text-2xl text-foreground mb-4">{project.title}</CardTitle>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (
             <Badge 
